@@ -1,23 +1,36 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
-  },
-  "dependencies": {
-    "expo": "~38.0.1",
-    "expo-status-bar": "^1.0.0",
-    "react": "~16.11.0",
-    "react-dom": "~16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.0.tar.gz",
-    "react-native-web": "~0.11.7"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "babel-preset-expo": "~8.1.0"
-  },
-  "private": true
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+        "start": "expo start",
+        "android": "expo start --android",
+        "ios": "expo start --ios",
+        "web": "expo start --web",
+        "eject": "expo eject"
+    },
+    "dependencies": {
+        "@expo-google-fonts/inter": "^0.1.0",
+        "@expo-google-fonts/nunito": "^0.1.0",
+        "@react-native-community/masked-view": "^0.1.10",
+        "@react-navigation/drawer": "^5.8.4",
+        "@react-navigation/native": "^5.6.1",
+        "@react-navigation/stack": "^5.6.2",
+        "expo": "~38.0.1",
+        "expo-font": "~8.2.1",
+        "expo-status-bar": "^1.0.0",
+        "react": "~16.11.0",
+        "react-dom": "~16.11.0",
+        "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.0.tar.gz",
+        "react-native-gesture-handler": "^1.6.1",
+        "react-native-reanimated": "^1.9.0",
+        "react-native-safe-area-context": "^3.0.2",
+        "react-native-screens": "^2.9.0",
+        "react-native-web": "~0.11.7",
+        "react-navigation": "^4.4.0",
+        "sans": "^1.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.6",
+        "babel-preset-expo": "~8.1.0"
+    },
+    "private": true
 }
