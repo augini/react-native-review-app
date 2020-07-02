@@ -22,28 +22,20 @@ export default function HomeScreen({ navigation }) {
     { title: 'Zeld', rating: 5, body: 'lorem ipsum', key: '9' },
   ])
 
-  const addNewReview = (review) => {
+    const addNewReview = (review) => {
     review.key = Math.floor(Math.random() * 900).toString()
     setReviews([review, ...reviews])
     setModalOpen(false)
   }
 
   const [categories, setCategories] = useState([
-    { date: 'Before', key: '1' },
-    { date: 'Yesterday', key: '2' },
-    { date: 'Today', key: '3' },
-    { date: 'Tomorrow', key: '4' },
-    { date: 'Later', key: '5' },
+    { time: 'Before', key: '1' },
+    { time: 'Yesterday', key: '2' },
+    { time: 'Today', key: '3' },
+    { time: 'Tomorrow', key: '4' },
+    { time: 'Later', key: '5' },
   ])
-  const [selectedCategory, setSelectedCategory] = useState('Today')
-  const [ activeColor, setActiveColor] = useState('#ffff')
 
-  const selectItem = (date) => {
-    setSelectedCategory(date)
-    setActiveColor((prevColor) => {
-      return prevColor === '#ffff' ? 'coral': '#ffff'
-    })
-  }
 
   return (
     <View style={globalStyles.container}>
@@ -66,18 +58,18 @@ export default function HomeScreen({ navigation }) {
         onPress={() => setModalOpen(true)}
       />
       <FlatList
-        flashScrollIndicators={false}
+        flashScrollIndicators ={false}
         horizontal={true}
         data={categories}
         renderItem={({ item }) =>
-          <CategoryCard  onPress = {()=>{selectItem(item.date)}}>
-            <Text>{item.date}</Text>
+          <CategoryCard>
+            <Text>{item.time}</Text>
           </CategoryCard>
         }
       />
-      <FlatList
+      <FlatList 
         data={reviews}
-        style={{ marginTop: 15 }}
+        style = {{marginTop:15}}
         renderItem={({ item }) =>
           <TouchableOpacity
             style={styles.item}
