@@ -1,9 +1,9 @@
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import AboutScreen from '../screens/AboutScreen'
-import Header from '../shared/Header'
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
+import AboutScreen from "../screens/AboutScreen";
+import Header from "../shared/Header";
 
-const aboutStack = createStackNavigator()
+const aboutStack = createStackNavigator();
 
 export const AboutStack = () => {
   return (
@@ -12,8 +12,11 @@ export const AboutStack = () => {
         name="About"
         component={AboutScreen}
         options={({ navigation, route }) => ({
-          headerTitle: () => <Header navigation={navigation} title = 'About' />
-        })} />
+          headerTitle: function () {
+            <Header navigation={navigation} title="About" />;
+          },
+        })}
+      />
     </aboutStack.Navigator>
-  )
-}
+  );
+};
